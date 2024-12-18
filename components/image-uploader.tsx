@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
+import { Loader2, Upload } from "lucide-react";
 
 export function ImageUploader() {
   const [file, setFile] = useState<File | null>(null);
@@ -70,7 +71,7 @@ export function ImageUploader() {
         onClick={handleUpload} 
         disabled={uploading}
       >
-        {uploading ? "Uploading..." : "Upload Image"}
+        {uploading ? <Loader2 className="animate-spin" />  : <Upload/>}
       </Button>
     </div>
   );
