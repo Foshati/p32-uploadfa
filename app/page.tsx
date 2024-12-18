@@ -1,9 +1,10 @@
-import { Button } from "@/components/ui/button";
+import { ImageUploader } from "@/components/image-uploader";
+
 
 export default function HomePage() {
   return (
-    <div>
-      <Button>click</Button>
+    <div className="flex item-center justify-center p-6">
+      <ImageUploader/>
     </div>
   );
 }
