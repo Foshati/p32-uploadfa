@@ -50,7 +50,7 @@ export function ImageUploader() {
           description: result.error,
         });
       }
-    } catch (error) {
+    } catch {
       toast({
         title: "Error",
         description: "An error occurred while uploading the file",
@@ -62,16 +62,16 @@ export function ImageUploader() {
 
   return (
     <div className="flex gap-2">
-      <Input 
-        type="file" 
+      <Input
+        type="file"
         onChange={handleFileChange}
         accept="image/*"
       />
-      <Button 
-        onClick={handleUpload} 
+      <Button
+        onClick={handleUpload}
         disabled={uploading}
       >
-        {uploading ? <Loader2 className="animate-spin" />  : <Upload/>}
+        {uploading ? <Loader2 className="animate-spin" /> : <Upload />}
       </Button>
     </div>
   );
